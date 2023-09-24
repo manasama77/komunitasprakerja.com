@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\Jadwal;
 use App\Models\Panduan;
 use App\Models\SliderBanner;
@@ -19,6 +20,7 @@ class LandingController extends Controller
         $team_tutors    = TeamTutor::latest()->get();
         $jadwals        = Jadwal::orderBy('dt_jadwal', 'desc')->get();
         $testimonis     = Testimoni::latest()->get();
+        $faqs           = Faq::latest()->get();
 
         $data = [
             'page_title'     => 'Beranda',
@@ -29,6 +31,7 @@ class LandingController extends Controller
             'team_tutors'    => $team_tutors,
             'jadwals'        => $jadwals,
             'testimonis'     => $testimonis,
+            'faqs'           => $faqs,
         ];
         return view('landing.home.main', $data);
     }

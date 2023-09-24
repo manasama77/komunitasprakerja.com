@@ -13,6 +13,7 @@
                 <li><a href="#team_tutor">Team tutor</a></li>
                 <li><a href="#jadwal">Jadwal pertemuan</a></li>
                 <li><a href="#testimoni">Testimoni</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
 

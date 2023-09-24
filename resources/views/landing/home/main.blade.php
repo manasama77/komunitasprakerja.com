@@ -27,6 +27,10 @@
         @include('landing.sections.testimoni')
         <!-- End Testimoni Section -->
 
+        <!-- ======= FAQ Section ======= -->
+        @include('landing.sections.faq')
+        <!-- End FAQ Section -->
+
         {{--
         <!-- ======= Stats Counter Section ======= -->
         <section id="stats-counter" class="stats-counter">
