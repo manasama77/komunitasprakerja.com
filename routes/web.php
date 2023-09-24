@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AdminFaqController;
 use App\Http\Controllers\AdminPanduanController;
 use App\Http\Controllers\AdminSliderBannerController;
 use App\Http\Controllers\AdminTeamTutorController;
@@ -53,4 +54,10 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('/testimoni/store', [AdminTestimoniController::class, 'store'])->name('admin.testimoni.store');
     Route::get('/testimoni/edit/{id}', [AdminTestimoniController::class, 'edit'])->name('admin.testimoni.edit');
     Route::post('/testimoni/update/{id}', [AdminTestimoniController::class, 'update'])->name('admin.testimoni.update');
+
+    Route::get('/faq', [AdminFaqController::class, 'index'])->name('admin.faq');
+    Route::get('/faq/create', [AdminFaqController::class, 'create'])->name('admin.faq.create');
+    Route::post('/faq/store', [AdminFaqController::class, 'store'])->name('admin.faq.store');
+    Route::get('/faq/edit/{id}', [AdminFaqController::class, 'edit'])->name('admin.faq.edit');
+    Route::post('/faq/update/{id}', [AdminFaqController::class, 'update'])->name('admin.faq.update');
 });
